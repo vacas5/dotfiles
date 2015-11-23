@@ -36,7 +36,7 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
-  
+
   # Show files ignored by git:
   ign = ls-files -o -i --exclude-standard
   last = cat-file commit HEAD
@@ -45,5 +45,3 @@
   safecrlf = warn
   whitespace = fix,tab-in-indent,trailing-space
   core = lf
-
-
