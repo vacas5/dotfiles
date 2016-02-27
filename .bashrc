@@ -22,3 +22,10 @@ fi
 if [ -f ~/.bashrc_local ]; then
   . ~/.bashrc_local
 fi
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export TERM=xterm-color
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+
+export HISTSIZE=10000
