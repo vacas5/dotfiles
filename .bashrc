@@ -11,7 +11,7 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
-. ~/dotfiles/cool_prompt
+. ~/cool_prompt
 
 # Include alias definitions
 if [ -f ~/.bash_aliases ]; then
