@@ -7,3 +7,9 @@ alias gupd='git pull upstream develop'
 
 # gulp
 alias gs='gulp serve'
+
+# npm
+alias ns='npm start'
+
+#sass
+alias sw='sass --watch sass/:src/'
