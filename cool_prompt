@@ -47,7 +47,7 @@ bash_prompt_command() {
     local BGC='\[\033[46m\]'
     local BGW='\[\033[47m\]'
 
-    local UC=$Y                 # user's color
+    local UC=$C                 # user's color
     [ $UID -eq "0" ] && UC=$R   # root's color
 
     # How many characters of the $PWD should be kept
@@ -65,11 +65,11 @@ bash_prompt_command() {
     fi
 
     if [ $LAST_CMD_EXIT == 0 ]; then
-        STATUS_COLOR="${BGG}:)${NONE}";
-        STATUS=":)";
+        STATUS_COLOR="${G}✓${NONE}";
+        STATUS="✓";
     else
-        STATUS_COLOR="${BGR}:(${NONE}";
-        STATUS=":(";
+        STATUS_COLOR="${R}✕${NONE}";
+        STATUS="✕";
     fi;
 
     # Change the window title of X terminals
@@ -87,7 +87,7 @@ bash_prompt_command() {
 	if [ $PROMPT_TYPE == 'xterm' ]; then
         PS1="${STATUS_COLOR} ${EMK}[${UC}\u${EMK}@${UC}\h ${M}\${NEW_PWD}${EMK}]${UC}\\$ ${NONE}\[\033]0;\u@\h \w\007\]${EMB}\$(parse_git_branch)"
 	elif [ $PROMPT_TYPE == 'console' ]; then
-        PS1="${STATUS_COLOR} ${EMK}[${UC}\u${EMK}@${UC}\h ${M}\${NEW_PWD}${EMK}]${UC} ${EMB}\$(parse_git_branch)${UC}\\$ ${NONE}"
+        PS1="${STATUS_COLOR} ${EMK}[${UC}\u${EMK}@${UC}\h ${M}\${NEW_PWD}${EMK}]${UC} ${EMB}\$(parse_git_branch) ${EMK}node $(nvm version) ${W}$ ${NONE}"
 	else
         PS1="${STATUS} [\u@\h \${NEW_PWD}] \$(parse_git_branch)\\$"
 	fi
@@ -103,4 +103,3 @@ if [ "$PS1" ]; then
     PROMPT_TYPE=console
     PROMPT_COMMAND=bash_prompt_command
 fi
-

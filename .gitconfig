@@ -45,3 +45,9 @@
   safecrlf = warn
   whitespace = fix,tab-in-indent,trailing-space
   core = lf
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
