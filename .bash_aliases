@@ -13,3 +13,6 @@ alias ns='npm start'
 
 #sass
 alias sw='sass --watch sass/:src/'
+
+# gatsby
+alias gclean='rm -rf .cache/ public/'
