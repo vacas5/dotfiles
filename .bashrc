@@ -36,3 +36,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Assumes rbenv install
 eval "$(rbenv init -)"
+
+function quest { grep -r --exclude-dir=node_modules "$1" .; }
+
+export quest

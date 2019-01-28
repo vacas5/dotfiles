@@ -85,9 +85,9 @@ bash_prompt_command() {
     esac
 
 	if [ $PROMPT_TYPE == 'xterm' ]; then
-        PS1="${STATUS_COLOR} ${EMK}[${UC}\u${EMK}@${UC}\h ${M}\${NEW_PWD}${EMK}]${UC}\\$ ${NONE}\[\033]0;\u@\h \w\007\]${EMB}\$(parse_git_branch)"
+        PS1="${STATUS_COLOR} ${EMK}[${M}\${NEW_PWD}${EMK} ${EMK}node $(nvm version)]${UC}\\$ ${NONE}\[\033]0;\u@\h \w\007\]${EMB}\$(parse_git_branch)"
 	elif [ $PROMPT_TYPE == 'console' ]; then
-        PS1="${STATUS_COLOR} ${EMK}[${UC}\u${EMK}@${UC}\h ${M}\${NEW_PWD}${EMK}]${UC} ${EMB}\$(parse_git_branch) ${EMK}node $(nvm version) ${W}$ ${NONE}"
+        PS1="${STATUS_COLOR} ${EMK}[${M}\${NEW_PWD}${EMK} ${EMK}node $(nvm version)]${UC} ${EMB}\$(parse_git_branch) ${W}$ ${NONE}"
 	else
         PS1="${STATUS} [\u@\h \${NEW_PWD}] \$(parse_git_branch)\\$"
 	fi
