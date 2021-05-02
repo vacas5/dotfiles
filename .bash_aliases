@@ -16,3 +16,13 @@ alias sw='sass --watch sass/:src/'
 
 # gatsby
 alias gclean='rm -rf .cache/ public/'
+
+# next
+alias yrd='yarn run dev:lint'
+
+# k8s
+alias qa-kubectl="kubectl --kubeconfig ${HOME}/.kube/config-qa"
+alias staging-kubectl="kubectl --kubeconfig ${HOME}/.kube/config-staging"
+alias production-kubectl="kubectl --kubeconfig ${HOME}/.kube/config-production"
+
+alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
