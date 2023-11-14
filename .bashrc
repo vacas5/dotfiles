@@ -41,10 +41,3 @@ function quest { grep -r --exclude-dir=node_modules "$1" .; }
 
 export quest
 
-# pnpm
-export PNPM_HOME="/Users/russellanderson/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
