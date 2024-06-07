@@ -1,6 +1,9 @@
 # behave like vi
 set -o vi
 
+# M1 mac stuff
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Load Homebrew's bash-completion helpers
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
@@ -35,7 +38,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Assumes rbenv install
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 function quest { grep -r --exclude-dir=node_modules "$1" .; }
 
