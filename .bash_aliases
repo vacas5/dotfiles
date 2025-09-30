@@ -5,8 +5,9 @@ alias ll='ls -la'
 alias deletemerged='git branch --merged develop | grep -v "\* develop" | xargs -n 1 git branch -d'
 alias gupd='git pull upstream develop'
 
-# gulp
-alias gs='gulp serve'
+# meanwhile
+alias lds='leontyne dev service'
+alias sve='source .venv/bin/activate'
 
 # npm
 alias ns='npm start'
