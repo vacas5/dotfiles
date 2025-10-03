@@ -44,3 +44,5 @@ function quest { grep -r --exclude-dir=node_modules "$1" .; }
 
 export quest
 
+
+. "$HOME/.local/bin/env"
